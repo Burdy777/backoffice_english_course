@@ -1,7 +1,27 @@
 /* eslint-disable */
 import { FuseNavigationItem } from '@fuse/components/navigation';
 
-export const defaultNavigation: FuseNavigationItem[] = [
+export const defaultNavigation:FuseNavigationItem[] = [
+    {
+        id      : 'dashboards',
+        title   : 'Dashboards',
+        subtitle: 'Unique dashboard designs',
+        type    : 'group',
+        icon    : 'heroicons_outline:home',
+        children: [
+        {
+            id   : 'dashboards.home',
+            title: 'Acceuil',
+            type : 'basic',
+            icon : 'heroicons_outline:clipboard-document-check',
+            link : '/dashboards/project',
+        },
+            ]
+        }
+             ]  
+
+
+export const defaultNavigationold: FuseNavigationItem[] = [
     {
         id      : 'dashboards',
         title   : 'Dashboards',
@@ -11,11 +31,12 @@ export const defaultNavigation: FuseNavigationItem[] = [
         children: [
             {
                 id   : 'dashboards.project',
-                title: 'Project',
+                title: 'project',
                 type : 'basic',
                 icon : 'heroicons_outline:clipboard-document-check',
                 link : '/dashboards/project',
             },
+        
             {
                 id   : 'dashboards.analytics',
                 title: 'Analytics',
